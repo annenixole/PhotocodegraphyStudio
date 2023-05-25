@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Company | Photocode Generator</title>
+  <link rel="shortcut icon" href="ASSESTS/website_logo-removebg-preview.png" type="x-icon" />
+  <!--tab icon-->
+  <link href="CSS/Company.css" rel="stylesheet" /> <!-- important -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--social icons-->
+
+</head>
+
+<body>
+  <!--nav bar -->
+  <nav>
+    <img src="ASSESTS/logo.png" height="120px" alt="logo">
+
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="GenerateImage.html">GENERATE IMAGE</a></li>
+      <li><a href="About.html">ABOUT</a></li>
+      <li><a a class="active" href="#">COMPANY</a></li>
+    </ul>
+  </nav>
+  <!--nav bar -->
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="ASSESTS/ComapnyHistory.png" width="100%" height="auto">
+      <div class="text">
+        <h2> Company History </h2>
+        <h3> The business is proposed by STI College Baliuag Grade 12 IT students. <br>
+          They came up with this type of business idea because they want to showcase their skills<br>and offer a service
+          business by utilizing their programming knowledge and developing <br> a new product that will be new on the
+          market.
+        </h3>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="ASSESTS/ComapnyHistory.png" width="100%" height="auto">
+      <div class="text">
+        <h2> Our Mission </h2>
+        <h3> To create a photography studio that is admired for its creativity and excellence<br>while also being
+          accessible and affordable to all. We strive to make our work available <br> in a variety of formats and
+          platforms to ensure that everyone can enjoy our services.<br> We believe that the power of photography lies in
+          its ability to bring people together and <br> tell meaningful stories, and by utilizing the latest technology
+          and creative approaches,<br>we can provide our clients with the best possible experience.
+        </h3>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="ASSESTS/ComapnyHistory.png" width="100%" height="auto">
+      <div class="text">
+        <h2> Our Vision </h2>
+        <h3> To become one of the most successful companies that<br> provides costumers a trusted, high-quality
+          photography services, and maintaining<br> excellent customer relationship. To become one of those competitive
+          company <br> regarding to the pricing and packages that caters to the local market,<br> while maintaining
+          high-quality photography services to the clients.
+        </h3>
+      </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+  <!-- footer-->
+    <footer>
+      <div class="footerContainer">
+
+        <ul class="navfooter">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100092698546595" target="_blank">Contact</a></li>
+        </ul>
+
+        <div class="description">
+          <p>We believe that the power of photography lies in its ability to bring people together and tell meaningful
+            stories, and by utilizing the latest technology and creative approaches, we can provide our clients with the
+            best possible experience.<br></br>Help us grow! Write some feedback and get a chance to get a 5% discount
+            voucher the next time you come visit us.</p>
+
+          <form action="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=photocodegraphystudio@gmail.com" method="post" enctype="text/plain" target="_blank"> <!-- mapupunta sa gmail-->
+            
+              <button id="feedbackbtn" type="submit" class="btn btn-secondary-outline btn-lg">Send Feedback</button>
+            </fieldset>
+          </form>
+          </div>
+
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100092698546595" target="_blank"> <i
+                class="fa fa-facebook"></i></a>
+            <a href="https://www.facebook.com/messages/t/120896414340767" target="_blank"> <i
+                class="fa fa-envelope"></i></a>
+            <a href="https://photocode-generator.annenicole.repl.co/"> <i class="fa fa-globe"></i></a>
+
+          </div>
+
+          <div class="FooterBottom">
+            <p>Copyright &copy;2023; Designed by<span class="designer">Photocodegraphy</span></p>
+          </div>
+        
+    </footer>
+        
+    <!-- footer-->
+
+
+</body>
+
+
+</html>

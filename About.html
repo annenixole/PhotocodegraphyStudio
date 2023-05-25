@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About | Photocode Generator</title>
+  <link rel="shortcut icon" href="ASSESTS/website_logo-removebg-preview.png" type="x-icon" />
+  <!--tab icon-->
+  <link href="CSS/About.css" rel="stylesheet" /> <!-- important -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+   <!--nav bar -->
+  <nav>
+    <img src="ASSESTS/logo.png" height="120px" alt="logo">
+
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="GenerateImage.html">GENERATE IMAGE</a></li>
+      <li><a a class="active" href="#">ABOUT</a></li>
+      <li><a href="Company.html">COMPANY</a></li> 
+    </ul>
+  </nav>
+  <!--nav bar -->
+
+  <!--header-->
+  <div class="header">
+      <img src="ASSESTS/website%20header.png" width="100%" height="auto">
+    </div>
+  <!--header-->
+
+   <!-- footer-->
+    <footer>
+        <div class="footerContainer">
+
+        <ul class="navfooter">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="Company.html">Company</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100092698546595" target="_blank">Contact</a></li>
+        </ul>
+
+        <div class="description">
+          <p>We believe that the power of photography lies in its ability to bring people together and tell meaningful
+            stories, and by utilizing the latest technology and creative approaches, we can provide our clients with the
+            best possible experience.<br></br>Help us grow! Write some feedback and get a chance to get a 5% discount
+            voucher the next time you come visit us.</p>
+
+          <form action="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=photocodegraphystudio@gmail.com" method="post" enctype="text/plain" target="_blank"> <!-- mapupunta sa gmail-->
+            
+              <button id="feedbackbtn" type="submit" class="btn btn-secondary-outline btn-lg">Send Feedback</button>
+            </fieldset>
+          </form>
+          </div>
+
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100092698546595" target="_blank"> <i
+                class="fa fa-facebook"></i></a>
+            <a href="https://www.facebook.com/messages/t/120896414340767" target="_blank"> <i
+                class="fa fa-envelope"></i></a>
+            <a href="https://photocode-generator.annenicole.repl.co/"> <i class="fa fa-globe"></i></a>
+
+          </div>
+
+          <div class="FooterBottom">
+            <p>Copyright &copy;2023; Designed by<span class="designer">Photocodegraphy</span></p>
+          </div>
+        
+    </footer>
+        
+
+    <!-- footer-->
+
+
+   <div class="tabs">
+      <h1> About us </h1>
+      <div class="tab-header">
+        <div class="active">
+          <i class="fa fa-camera"></i> Description
+        </div>
+        <div>
+          <i class="fa fa-bullseye"></i> Objectives
+        </div>
+        <div>
+          <i class="fa fa-question"></i> FAQ
+        </div>
+      </div>
+
+     <div class="tab-indicator"></div>
+      <div class="tab-body">
+        <div class="active" id="active">
+        </br><p>Photocoderaphy is a start-up photo printing studio that will provide high-quality, one-of-a-kind, customizable, and creative printing services to meet our customer's needs and satisfaction.<br></br> We specialize in digital editing and programming to provide our clients with unique and innovative portrait pictures of their choice.</p>
+        </div>
+        <div>
+          <br> <h3>Our Objectives</h3> 
+          </br> <p> •	To become a company that will create loyal customers and to increase the number ㅤof clients for the photography studio by offering incentives including discounts and ㅤreferral rewards. <br></br>
+•	To increase the studio’s visibility in the local community through a comprehensive ㅤmarketing and advertising campaign.<br></br>
+•	To produce an affordable and unique product and yet profitable for the company.<br></br>
+•	To develop a website that generates text portraits automatically.<br></br>
+•	Increase customer satisfaction ratings by improving our product quality, deliveryㅤㅤtimes, and customer service. <br></br>
+ </p>
+        </div>
+        <div>
+          <br> <h5>Below is some useful information to help you get started with our website</h5>
+          <br>  
+          <p class="question"><h3> How to navigate through this website?</h3> </p>
+          <br>
+          <p class="answer">Go to the "Generate Image" section on the navigation bar and choose a photo that you want to convert. Write down the words, lyrics, or any text that you want to appear on the picture. When you click the generate button, your text portrait image will appear.</p>
+          <br>
+          <p class="question"> <h3>Is this website compatible for all types of devices?</h3></p>
+          <br>          
+          <p class="answer">This website is currently only available for laptop and desktop users.</p>
+          <br>
+          <p class="question"> <h3>What are the benefits of using this website?</h3> </p>
+          <br> 
+          <p class="answer"> This text portrait generator converts a picture into text automatically. This is extremely useful for those who want to convert images to text. It will quickly generate CSS text portraits in just a few seconds! There's no need to write a single line of code or use Photoshop.</p>
+          <br></br>
+        </div>
+      </div>
+
+
+   <script>
+     
+    let tabHeader = document.getElementsByClassName("tab-header")[0];
+    let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+    let tabBody = document.getElementsByClassName("tab-body")[0];
+
+    let tabsPane = tabHeader.getElementsByTagName("div");
+
+    for(let i=0;i<tabsPane.length;i++){
+      tabsPane[i].addEventListener("click",function(){
+        tabHeader.getElementsByClassName("active")[0].classList.remove("active");
+        tabsPane[i].classList.add("active");
+        tabBody.getElementsByClassName("active")[0].classList.remove("active");
+        tabBody.getElementsByTagName("div")[i].classList.add("active");
+        tabIndicator.style.left=`calc(calc(100% / 4) * ${i})`;
+      });
+    }
+   </script>
+  
+
+      </body>
+      </html>
